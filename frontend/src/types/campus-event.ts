@@ -9,6 +9,7 @@ export interface CampusEvent {
   location: string;
   description: string;
   capacity: number;
+  image?:string;
 }
 
 export interface EventFormData {
