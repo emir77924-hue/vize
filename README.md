@@ -4,7 +4,7 @@ Bu proje; fakültedeki seminer, atölye ve söyleşileri tek bir yerden takip et
 
 ## 🚀 Canlı Vercel Adresi
 
-
+https://emircantuncay-frontendd-pi.vercel.app/
 ---
 
 ## ⚙️ Kurulum ve Çalıştırma
