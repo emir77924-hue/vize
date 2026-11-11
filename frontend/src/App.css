@@ -1,16 +1,18 @@
+/* Emircan Tunçay — 2416501018 */
 :root {
   --no: 2416501018;
   --ton: mod(var(--no), 360);
-  --renk-ana: hsl(var(--ton) 68% 36%);
-  --renk-ana-hover: hsl(var(--ton) 72% 30%);
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-ana-hover: hsl(var(--ton) 70% 30%);
   --renk-ana-acik: hsl(var(--ton) 50% 92%);
-  --renk-zemin: hsl(var(--ton) 25% 98%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
   --renk-arkaplan: #0d1527;
   --renk-yazi: #1f2937;
   --renk-yazi-soluk: #4b5563;
   --renk-kenarlik: #e2e8f0;
-  --font: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --kose: 12px;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --bosluk-m: 1rem;
+  --kose: 8px;
   --kose-lg: 16px;
   --golge-kart: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
   --golge-hover: 0 14px 28px -4px rgba(15, 23, 42, 0.12), 0 6px 12px -2px rgba(15, 23, 42, 0.06);

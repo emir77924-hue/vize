@@ -4,8 +4,9 @@
   --ton: mod(var(--no), 360);
   --renk-ana: hsl(var(--ton) 65% 38%);
   --renk-zemin: hsl(var(--ton) 30% 97%);
-  --font: "system-ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --kose: 10px;
+  --font: system-ui, sans-serif;
+  --bosluk-m: 1rem;
+  --kose: 8px;
 }
 
 * {
