@@ -1,21 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kampüs Etkinlik Portalı - Ana Sayfa</title>
 </head>
-<h1>Anasayfa</h1>
-<p>Etknlikler Ana Sayfası</p>
-<a href="/etkinlikler.html">Etkinlikler Sayfası</a>
-<section>
-    <table border="1">
-    <caption><h2>Yaklaşan Etkinlikler</h1></caption>
-        <tr><td><h2>Web Topluluğu</h1>Seminer *<time datetime="2026-09-25">25 Eylül</time>*A Blok<a href="/etkinlik-detay.html"><footer>Detayları Gör</footer></a></td>
-        <tr><td><h2>Lab 2026</h1>Laboratuvar *<time datetime="2026-10-15">15 Ekim</time>*A Blok<a href="/etkinlik-detay2.html"><footer>Detayları Gör</footer></a></td>
-          
-    
-    </tr>
-</table>
-</section>
+<body>
+    <header>
+        <h1>Kampüs Etkinlik Portalı</h1>
+        <p>Üniversitemiz bünyesindeki tüm güncel etkinlikleri tek platformdan takip edin.</p>
+    </header>
+
+    <nav>
+        <a href="/index.html">Ana Sayfa</a> | 
+        <a href="/etkinlikler.html">Tüm Etkinlikler</a> | 
+        <a href="/etkinlik-ekle.html">Yeni Etkinlik Ekle</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Yaklaşan Etkinlikler</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <caption>En Yakın Tarihli Etkinlikler</caption>
+                <thead>
+                    <tr>
+                        <th>Etkinlik Başlığı</th>
+                        <th>Tür</th>
+                        <th>Tarih</th>
+                        <th>Konum</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Yapay Zeka ve Büyük Veri Zirvesi 2026</strong></td>
+                        <td>Seminer</td>
+                        <td><time datetime="2026-10-14">14 Ekim 2026</time></td>
+                        <td>Merkez Amfi 1</td>
+                        <td><a href="/etkinlik-detay.html">Detayları Gör</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Otonom Robotik ve Gömülü Sistemler Atölyesi</strong></td>
+                        <td>Atölye</td>
+                        <td><time datetime="2026-10-22">22 Ekim 2026</time></td>
+                        <td>Müh. Lab 3</td>
+                        <td><a href="/etkinlik-detay2.html">Detayları Gör</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a href="/etkinlikler.html">Tüm listeyi görüntüle &rarr;</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Emircan Tunçay · 2416501018 · 2026</p>
+    </footer>
+</body>
 </html>

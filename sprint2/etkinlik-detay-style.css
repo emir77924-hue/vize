@@ -2,169 +2,144 @@
 :root {
   --no: 2416501018;
   --ton: mod(var(--no), 360);
-  --renk-ana: hsl(var(--ton) 65% 38%);
-  --renk-zemin: hsl(var(--ton) 30% 97%);
-  --renk-afis-bg: hsl(var(--ton) 30% 83%);
-  --font: "system-ui", sans-serif;
-  --bosluk-m: 1rem;
-  --kose: 8px;
+  --renk-ana: hsl(var(--ton) 68% 36%);
+  --renk-zemin: hsl(var(--ton) 28% 97%);
+  --font: "system-ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --kose: 10px;
 }
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: var(--font);
-  background-color: #111a2e; /* Sayfa dışı koyu lacivert arka plan */
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #0f172a;
+  color: #1e293b;
+  display: flex;
+  font-family: var(--font);
+  justify-content: center;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
-/* Kapsayıcı Beyaz/Açık Yeşil Kart */
 .kart {
   background-color: var(--renk-zemin);
-  width: 100%;
-  max-width: 580px;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45);
+  max-width: 760px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
 
-/* Header ve Navigasyon Yapısı */
 header {
   background-color: var(--renk-ana);
-  color: white;
-  padding: 1.2rem 1.5rem;
+  color: #ffffff;
+  padding: 1.4rem 1.8rem;
 }
 
 header h1 {
-  text-align: left; /* Görsele uygun olarak sola hizalandı */
-  font-size: 1.35rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
 }
 
 header nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-header a {
-  color: white;
-  text-decoration: none;
+header nav a {
+  color: #ffffff;
   font-size: 0.95rem;
-  margin-left: 0; /* Boşluk gap ile sağlandı */
+  text-decoration: none;
 }
 
-header a:hover {
+header nav a:hover {
   text-decoration: underline;
 }
 
-/* Main Bölümü (Afiş solda, Künye sağda) */
 main {
-  padding: 1.5rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: 1.8rem;
 }
 
-/* Sol Taraf: Afiş */
 .afis-kutusu {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  max-width: 300px;
 }
+
 .afis-kutusu img {
-  width: 100%;
-  height: 140px;            /* Taşmayı önlemek için sabit yükseklik */
-  object-fit: contain;      /* Resmi kırpmadan/sündürmeden kutuya sığdırır */
-  background-color: var(--renk-afis-bg); /* Tasarımdaki açık yeşil arka plan */
   border-radius: var(--kose);
-  display: block;
-}
-
-.afis-gorsel {
-  background-color: var(--renk-afis-bg);
-  height: 140px;
-  border-radius: var(--kose);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #2b3a2b;
-  font-size: 0.95rem;
-}
-
-.afis-gorsel img {
-  width: 100%;
-  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  height: auto;
   object-fit: cover;
-  border-radius: var(--kose);
+  width: 100%;
 }
 
-figcaption {
-  font-style: italic;
-  font-size: 0.85rem;
+.afis-kutusu figcaption {
+  color: #64748b;
+  font-size: 0.82rem;
   margin-top: 0.5rem;
-  color: #333;
+  text-align: center;
 }
 
-/* Sağ Taraf: Künye Yapısı (dl) */
 .kunye-alani {
-  flex: 1;
   display: flex;
+  flex: 1.4;
   flex-direction: column;
+  gap: 0.9rem;
 }
 
-dl {
+.kunye-alani dl {
+  column-gap: 1rem;
   display: grid;
+  font-size: 0.95rem;
   grid-template-columns: auto 1fr;
-  gap: 0.4rem 1rem;
-  border: 1px solid #d0d5d0;
-  border-radius: var(--kose);
-  padding: 0.8rem;
-  background-color: #ffffff;
-  font-size: 0.9rem;
+  row-gap: 0.6rem;
 }
 
-dt {
-  font-weight: bold;
-  color: #111;
+.kunye-alani dt {
+  color: #334155;
+  font-weight: 600;
 }
 
-dd {
-  color: #333;
+.kunye-alani dt::after {
+  content: ":";
 }
 
-.aciklama {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.3;
-  color: #222;
+.kunye-alani dd {
+  color: #64748b;
 }
 
-
-footer {
-  margin-top: 0.8rem;
+.kunye-alani .aciklama {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.4rem;
 }
 
 .geri-link {
   color: var(--renk-ana);
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
 }
 
 .geri-link:hover {
   text-decoration: underline;
 }
 
-/* Mobil Uyum: Ekran küçüldüğünde alt alta geçer */
-@media (max-width: 550px) {
+@media (max-width: 680px) {
   main {
     flex-direction: column;
+  }
+  .afis-kutusu {
+    max-width: 100%;
   }
 }

@@ -1,33 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yeni Etkinlik Kaydı</title>
 </head>
-<header>
-    <h1>Etkinlik Ekle</h1>
-   
-</header>
-<nav>
-     <a href="/index.html">Anasayfa </a><a href="/etkinlikler.html">Etkinlikler </a><a href="/etkinlik-ekle.html">Ekle</a>
-</nav>
-<main>
-    <form>
-        <label>Etkinlik Adı</label>
-        <p><input type="text"></input></p>
-        <label>Kategori</label>
-        <p><select>
-<option>Seminer</option>
-<option>Labaratuvar</option>
-<option>Toplantı</option>
+<body>
+    <header>
+        <h1>Yeni Etkinlik Tanımla</h1>
+    </header>
 
-        </select></p>
+    <nav>
+        <a href="/index.html">Ana Sayfa</a> | 
+        <a href="/etkinlikler.html">Tüm Etkinlikler</a> | 
+        <a href="/etkinlik-ekle.html">Yeni Etkinlik Ekle</a>
+    </nav>
 
-        <input type="datetime-local">
-        <label>Açıklama</label>
-        <p><textarea></textarea></p>
-        <button>Kaydet</button>
-    </form>
-</main>
+    <main>
+        <form>
+            <p>
+                <label for="ad">Etkinlik Başlığı:</label><br>
+                <input type="text" id="ad" name="ad" placeholder="Örn: Mobil Kodlama Kampı" required>
+            </p>
+            <p>
+                <label for="kategori">Kategori:</label><br>
+                <select id="kategori" name="kategori">
+                    <option value="Seminer">Seminer</option>
+                    <option value="Atölye">Atölye</option>
+                    <option value="Söyleşi">Söyleşi</option>
+                    <option value="Yarışma">Yarışma</option>
+                </select>
+            </p>
+            <p>
+                <label for="tarih">Tarih ve Saat:</label><br>
+                <input type="datetime-local" id="tarih" name="tarih" required>
+            </p>
+            <p>
+                <label for="konum">Etkinlik Yeri:</label><br>
+                <input type="text" id="konum" name="konum" placeholder="Örn: A Blok Amfi 2">
+            </p>
+            <p>
+                <label for="kontenjan">Katılımcı Sayısı:</label><br>
+                <input type="number" id="kontenjan" name="kontenjan" min="1" max="500">
+            </p>
+            <p>
+                <label for="aciklama">Etkinlik Detayları:</label><br>
+                <textarea id="aciklama" name="aciklama" rows="4" cols="50" placeholder="Etkinlik hakkında bilgi girin..."></textarea>
+            </p>
+            <button type="submit">Etkinliği Yayınla</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Emircan Tunçay · 2416501018 · 2026</p>
+    </footer>
+</body>
 </html>

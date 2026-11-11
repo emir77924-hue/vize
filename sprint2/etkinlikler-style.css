@@ -2,122 +2,144 @@
 :root {
   --no: 2416501018;
   --ton: mod(var(--no), 360);
-  --renk-ana: hsl(var(--ton) 65% 38%);
-  --renk-zemin: hsl(var(--ton) 30% 97%);
-  --font: "system-ui", sans-serif;
-  --bosluk-m: 1rem;
-  --kose: 8px;
+  --renk-ana: hsl(var(--ton) 68% 36%);
+  --renk-zemin: hsl(var(--ton) 28% 97%);
+  --font: "system-ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --kose: 10px;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font);
-  background-color: #111a2e; /* Dış arka plan koyu lacivert */
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #0f172a;
+  color: #1e293b;
+  display: flex;
+  font-family: var(--font);
+  justify-content: center;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
-/* Ana Beyaz/Açık Yeşil Kapsayıcı Kart */
 .kapsayici-kart {
   background-color: var(--renk-zemin);
-  width: 100%;
-  max-width: 650px;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45);
+  max-width: 900px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
 
-/* Yeşil Üst Header */
 header {
   background-color: var(--renk-ana);
-  color: white;
-  padding: 1.2rem 1.5rem;
+  color: #ffffff;
+  padding: 1.4rem 1.8rem;
 }
 
 header h1 {
-  font-size: 1.35rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
 }
 
 header nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 header nav a {
-  color: white;
-  text-decoration: none;
+  color: #ffffff;
   font-size: 0.95rem;
+  text-decoration: none;
 }
 
 header nav a:hover {
   text-decoration: underline;
 }
 
-/* Main Bölümü */
 main {
-  padding: 1.5rem;
+  padding: 1.8rem;
 }
 
 main h2 {
-  font-size: 1.2rem;
-  color: #111;
+  color: #0f172a;
+  font-size: 1.3rem;
   margin-bottom: 1.2rem;
 }
 
-/* Kartların 3 Sütunlu Grid Düzeni */
 .etkinlikler-izgara {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Masaüstünde 3 eşit sütun */
-  gap: 1rem;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-/* Beyaz Kart Tasarımı */
 .etkinlik-karti {
   background-color: #ffffff;
-  border: 1px solid #e0e5e0;
+  border: 1px solid #e2e8f0;
   border-radius: var(--kose);
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.45rem;
   height: 100%;
+  padding: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.etkinlik-karti:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .etkinlik-karti h3 {
-  font-size: 1.05rem;
-  color: #111;
-  line-height: 1.2;
+  color: #0f172a;
+  font-size: 1.1rem;
+  line-height: 1.35;
 }
 
-.etkinlik-karti p {
-  font-size: 0.9rem;
-  color: #444;
+.etkinlik-karti .kategori {
+  color: var(--renk-ana);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.etkinlik-karti .tarih,
+.etkinlik-karti .konum {
+  color: #64748b;
+  font-size: 0.88rem;
 }
 
 .detay-link {
   color: var(--renk-ana);
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-top: auto;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  margin-top: auto; /* Bağlantıyı kartın en altına iter */
-  padding-top: 0.4rem;
 }
 
 .detay-link:hover {
   text-decoration: underline;
 }
 
-/* Mobil Uyum: Görsel altındaki nota göre telefonda tek sütuna düşer */
-@media (max-width: 580px) {
+footer {
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.88rem;
+  padding: 1rem 1.8rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .etkinlikler-izgara {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
   .etkinlikler-izgara {
     grid-template-columns: 1fr;
   }
