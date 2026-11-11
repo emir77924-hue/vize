@@ -1,6 +1,6 @@
-/* Yiğit Özdemir — 2416501838 */
+/* Emircan Tunçay — 2416501018 */
 :root {
-  --no: 2416501838;
+  --no: 2416501018;
   --ton: mod(var(--no), 360);
   --renk-ana: hsl(var(--ton) 65% 38%);
   --renk-zemin: hsl(var(--ton) 30% 97%);
