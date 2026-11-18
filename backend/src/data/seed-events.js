@@ -1,6 +1,5 @@
-export const events = [
+export const seedEvents = [
   {
-    id: "event-1",
     title: "Yapay Zeka ve Büyük Veri Zirvesi 2026",
     category: "Seminer",
     capacity: 150,
@@ -10,7 +9,6 @@ export const events = [
     description: "Üretken yapay zeka modelleri ve büyük veri analitiğinin geleceğine dair uzman sunumları."
   },
   {
-    id: "event-2",
     title: "Otonom Robotik ve Gömülü Sistemler Atölyesi",
     category: "Atölye",
     capacity: 30,
@@ -20,7 +18,6 @@ export const events = [
     description: "Mikrodenetleyici programlama ile otonom engel algılayan robot prototipi geliştirme."
   },
   {
-    id: "event-3",
     title: "Siber Savunma ve Etik Hackerlık Söyleşisi",
     category: "Söyleşi",
     capacity: 75,
@@ -30,7 +27,6 @@ export const events = [
     description: "Kurumsal siber güvenlik önlemleri, sızma testleri ve sektör kariyer fırsatları."
   },
   {
-    id: "event-4",
     title: "Modern Web Mimarisi ve React 19 Atölyesi",
     category: "Atölye",
     capacity: 35,
@@ -40,7 +36,6 @@ export const events = [
     description: "Component mimarisi, custom hook tasarımı ve modern CSS teknikleriyle web geliştirme."
   },
   {
-    id: "event-5",
     title: "Bulut Bilişim ve DevOps Vizyonu",
     category: "Seminer",
     capacity: 110,
@@ -50,7 +45,6 @@ export const events = [
     description: "Docker, Kubernetes ve CI/CD süreçleri ile mikroservis mimarisine geçiş deneyimleri."
   },
   {
-    id: "event-6",
     title: "Yazılım Girişimciliği ve Fon Bulma Paneli",
     category: "Söyleşi",
     capacity: 85,
