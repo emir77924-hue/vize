@@ -49,7 +49,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/events/event-2",
+          "raw": "http://localhost:3000/events/6afd579a8665ec1b4dc779b0",
           "protocol": "http",
           "host": [
             "localhost"
@@ -57,7 +57,7 @@
           "port": "3000",
           "path": [
             "events",
-            "event-2"
+            "6afd579a8665ec1b4dc779b0"
           ]
         }
       },
@@ -69,7 +69,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/events/yok",
+          "raw": "http://localhost:3000/events/111111",
           "protocol": "http",
           "host": [
             "localhost"
@@ -77,7 +77,7 @@
           "port": "3000",
           "path": [
             "events",
-            "yok"
+            "111111"
           ]
         }
       },
