@@ -1,4 +1,4 @@
-# Kampüs Etkinlikleri - Backend REST API (Sprint 8: Kalıcı Veri)
+# Kampüs Etkinlikleri - Backend REST API (Sprint 9: Tam CRUD ve Sorgular)
 
 Bu proje, frontend uygulamasının yanında çalışan ve etkinlik verilerini MongoDB üzerinde Mongoose ODM ile kalıcı olarak saklayan Node.js + Express tabanlı bir REST API sunucusudur.
 
@@ -18,7 +18,7 @@ npm install
 # Veritabanını 6 örnek etkinlik verisi ile doldurun (seed)
 npm run seed
 
-# Geliştirme (watch) modunda sunucuyu başlatın
+# Geliştirme modunda sunucuyu başlatın
 npm run dev
 ```
 
@@ -44,16 +44,17 @@ MONGODB_URI=mongodb://127.0.0.1:27017/kampus
 
 ## 📋 REST API Sözleşmesi
 
-Aşağıdaki tablo, Sprint 8 kapsamında Mongoose ve MongoDB kalıcı veri katmanı ile çalışan endpoint sözleşmelerini tanımlar:
+Aşağıdaki tablo, Sprint 9 kapsamında çalışan tüm endpoint sözleşmelerini tanımlar:
 
-| Method | Endpoint | Amaç | Başarılı Durum Kodu | Hata Durum Kodu | Durum |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **GET** | `/health` | Sunucu sağlık kontrolü ve öğrenci no doğrulaması (`2416501018`) | `200 OK` | — | Aktif |
-| **GET** | `/events` | Tüm etkinlik listesini getir (tarihe göre sıralı, opsiyonel `?category=` filtresi) | `200 OK` | `500 Server error` | Aktif |
-| **GET** | `/events/:id` | MongoDB `_id`sine göre tek bir etkinliği getir | `200 OK` | `404 Not Found` | Aktif |
-| **POST** | `/events` | Yeni bir etkinlik oluşturur (`title`, `category`, `date` zorunlu) | `201 Created` | `400 Bad Request` | Aktif |
-| **PATCH** | `/events/:id` | Var olan etkinliği günceller | `200 OK` | `400 Bad Request`, `404 Not Found` | Sprint 9 |
-| **DELETE**| `/events/:id` | Var olan etkinliği siler | `204 No Content` | `404 Not Found` | Sprint 9 |
+| Method | Endpoint | Başarılı | Hata | Durum |
+| :--- | :--- | :--- | :--- | :--- |
+| **GET** | `/health` | `200` | — | çalışıyor |
+| **GET** | `/events?search=&category=` | `200` | — | çalışıyor |
+| **GET** | `/events/upcoming` | `200 - tarihe göre sıralı` | — | çalışıyor |
+| **GET** | `/events/:id` | `200` | `404` | çalışıyor |
+| **POST** | `/events` | `201` | `400` | çalışıyor |
+| **PATCH** | `/events/:id` | `200 - güncel kayıt` | `400, 404` | çalışıyor |
+| **DELETE** | `/events/:id` | `204 - gövde yok` | `404` | çalışıyor |
 
 ---
 
@@ -69,8 +70,5 @@ Tüm hata durumlarında API tutarlı bir JSON formatı ile yanıt verir:
 }
 ```
 
----
-
-## 🧪 Postman Test İstekleri
-
-Otomatik değerlendirme ve doğrulama için gerekli 6 adet test isteği Postman v2.1 Collection formatında `requests/kampus-api.json` dosyasına eklenmiştir.
+* **Tarih Formatı:** Tarihler API genelinde `GG-AA-YYYY` (örn: `"15-10-2026"`) biçiminde alınır ve döndürülür, MongoDB'de gerçek Date nesnesi olarak saklanır.
+* **Geçersiz ID:** Geçersiz ya da bulunamayan ID sorgularında `404 Not Found` yanıtı verilir.

@@ -3,7 +3,7 @@ export const seedEvents = [
     title: "Yapay Zeka ve Büyük Veri Zirvesi 2026",
     category: "Seminer",
     capacity: 150,
-    date: "2026-10-14",
+    date: "14-10-2026",          // geçmiş tarih
     time: "13:30",
     location: "Merkez Amfi 1",
     description: "Üretken yapay zeka modelleri ve büyük veri analitiğinin geleceğine dair uzman sunumları."
@@ -12,7 +12,7 @@ export const seedEvents = [
     title: "Otonom Robotik ve Gömülü Sistemler Atölyesi",
     category: "Atölye",
     capacity: 30,
-    date: "2026-10-22",
+    date: "22-10-2026",          // geçmiş tarih
     time: "10:30",
     location: "Mühendislik Fakültesi Lab 3",
     description: "Mikrodenetleyici programlama ile otonom engel algılayan robot prototipi geliştirme."
@@ -21,7 +21,7 @@ export const seedEvents = [
     title: "Siber Savunma ve Etik Hackerlık Söyleşisi",
     category: "Söyleşi",
     capacity: 75,
-    date: "2026-10-29",
+    date: "29-10-2026",          // geçmiş tarih
     time: "14:00",
     location: "C Blok Konferans Salonu",
     description: "Kurumsal siber güvenlik önlemleri, sızma testleri ve sektör kariyer fırsatları."
@@ -30,7 +30,7 @@ export const seedEvents = [
     title: "Modern Web Mimarisi ve React 19 Atölyesi",
     category: "Atölye",
     capacity: 35,
-    date: "2026-11-05",
+    date: "05-11-2026",          // geçmiş tarih
     time: "15:00",
     location: "Yazılım Laboratuvarı 2",
     description: "Component mimarisi, custom hook tasarımı ve modern CSS teknikleriyle web geliştirme."
@@ -39,7 +39,7 @@ export const seedEvents = [
     title: "Bulut Bilişim ve DevOps Vizyonu",
     category: "Seminer",
     capacity: 110,
-    date: "2026-11-12",
+    date: "12-12-2026",          // gelecek tarih
     time: "11:00",
     location: "A Blok Konferans Salonu",
     description: "Docker, Kubernetes ve CI/CD süreçleri ile mikroservis mimarisine geçiş deneyimleri."
@@ -48,7 +48,7 @@ export const seedEvents = [
     title: "Yazılım Girişimciliği ve Fon Bulma Paneli",
     category: "Söyleşi",
     capacity: 85,
-    date: "2026-11-26",
+    date: "26-12-2026",          // gelecek tarih
     time: "16:00",
     location: "İnovasyon Merkezi Seminer Odası",
     description: "Başarılı startup kurucularından tohum yatırım alma ve ürün pazarlama stratejileri."
